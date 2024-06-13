@@ -17,13 +17,8 @@ información (se debe proponer como mostrar la información):
 ## Proceso de instalación:
 
 - clonación del proyecto: git clone https://github.com/morronepablo/Recursiva---Challenge---NodeJS.git
-- https://www.varietalvinoteca.com.ar -> animaciones de página principal
-- https://frappe.com.ar -> animaciones de página principal, estilo general de la página, datos requeridos para el registro del cliente y filtro de productos.
-- https://www.vinotecacampos.com.ar -> diferentes vistas al seleccionar un producto.
-- https://soilwines.com.ar -> linda introducción de imágenes y font-family
-- https://kiria.com.ar/ -> presentación original de la empresa y de los productos y servicios ofrecidos.
-- https://www.bonvivir.com -> sección de “Contacto”.
-- https://www.club-de-vinos.com -> estructura de la web.
+- instalación de dependencias: npm install
+- Ejecución del proyecto: npm start
 
 ## Integrantes del proyecto:
 
@@ -31,4 +26,8 @@ información (se debe proponer como mostrar la información):
 
 ### Repositorio GitHub NodeJs con motor de plantilla ejs:
 
-https://github.com/AgustinaOlmos/DH-Grupo7-Brainstorming.git
+https://github.com/morronepablo/Recursiva---Challenge---NodeJS.git
+
+### Comentario Personal:
+
+Muchas gracias por esta oportunidad y espero que sea de su agrado quedo a la espera de novedades y comentarios !!!!!
