@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+
+    <link rel="stylesheet" href="dist/css/adminlte.min.css?v=3.2.0">
+
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="content" style="min-height: 877px;">
+
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Dashboard</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-4 col-6">
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>
+                                    <%= totalSocios %>
+                                </h3>
+                                <p>Total Socios</p>
+                            </div>
+                            <a href="#" class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-6">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>
+                                    <%= Math.round(promedioEdadRacing.toFixed(2)) %> años
+                                </h3>
+                                <p>Promedio de edad de los socios de Racing</p>
+                            </div>
+                            <a href="#" class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-6">
+                        <div class="small-box bg-warning">
+                            <div class="inner">
+                                <h5><strong>Los 5 nombres más comunes</strong></h5>
+                                <p style="font-size: 14px; font-weight: bold;">entre los hinchas de River</p>
+                                <div class="container">
+                                    <div class="row">
+                                        <% nombresComunesRiver.forEach(nombre=> { %>
+                                            <div class="col">
+                                                <%= nombre %>
+                                            </div>
+                                            <% }); %>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card direct-chat direct-chat-primary">
+                            <div class="card-header ui-sortable-handle bg-black" style="cursor: move;">
+                                <h3 class="card-title">100 primeras personas casadas con estudios universitarios</h3>
+                                <div class="card-tools">
+
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="direct-chat-messages">
+                                    <ul>
+                                        <% casadosUniversitarios.forEach(socio=> { %>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <b>Socio: </b>
+                                                    <%= socio.nombre %>
+                                                </div>
+                                                <div class="col">
+                                                    <b>Edad: </b>
+                                                    <%= socio.edad %>
+                                                </div>
+                                                <div class="col">
+                                                    <b>Equipo: </b>
+                                                    <%= socio.equipo %>
+                                                </div>
+                                            </div>
+                                            <% }); %>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#" class="small-box-footer text-dark">Más info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card direct-chat direct-chat-primary">
+                            <div class="card-header ui-sortable-handle bg-danger" style="cursor: move;">
+                                <h3 class="card-title">Listado de equipos con estadísticas de edad</h3>
+                                <div class="card-tools">
+
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="direct-chat-messages">
+                                    <ul>
+                                        <% equipoStatsList.forEach(stats=> { %>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <b>Equipo: </b>
+                                                    <%= stats.equipo %>
+                                                </div>
+                                                <div class="col">
+                                                    <b>Promedio de edad: </b>
+                                                    <%= Math.round(stats.promedioEdad.toFixed(2)) %> años
+                                                </div>
+                                                <div class="col">
+                                                    <b>Edad mínima: </b>
+                                                    <%= stats.minEdad %>
+                                                </div>
+                                                <div class="col">
+                                                    <b>Edad máxima: </b>
+                                                    <%= stats.maxEdad %>
+                                                </div>
+                                            </div>
+                                            <% }); %>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="#" class="small-box-footer text-danger">Más info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Resultados de Socios</h1>
+
+    <h2>Cantidad total de personas registradas</h2>
+    <p>
+        <%= totalSocios %>
+    </p>
+
+    <h2>Promedio de edad de los socios de Racing</h2>
+    <p>
+        <%= promedioEdadRacing.toFixed(2) %>
+    </p>
+
+    <h2>100 primeras personas casadas con estudios universitarios</h2>
+    <ul>
+        <% casadosUniversitarios.forEach(socio=> { %>
+            <li>
+                <%= socio.nombre %> - <%= socio.edad %> - <%= socio.equipo %>
+            </li>
+            <% }); %>
+    </ul>
+
+    <h2>Los 5 nombres más comunes entre los hinchas de River</h2>
+    <ul>
+        <% nombresComunesRiver.forEach(nombre=> { %>
+            <li>
+                <%= nombre %>
+            </li>
+            <% }); %>
+    </ul>
+
+    <h2>Listado de equipos con estadísticas de edad</h2>
+    <ul>
+        <% equipoStatsList.forEach(stats=> { %>
+            <li>
+                <strong>
+                    <%= stats.equipo %>
+                </strong>:
+                Promedio de edad: <%= stats.promedioEdad.toFixed(2) %>,
+                    Edad mínima: <%= stats.minEdad %>,
+                        Edad máxima: <%= stats.maxEdad %>
+            </li>
+            <% }); %>
+    </ul> -->
+</body>
+
+</html>

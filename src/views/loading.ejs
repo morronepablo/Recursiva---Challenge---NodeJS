@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursiva - Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/loading.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="50px" height="50px" viewBox="0 0 32 32"
+                    version="1.1">
+                    <title>wetransfer</title>
+                    <path
+                        d="M9.253 18.659c0.409 0 0.681 0.204 0.953 0.681l1.227 1.977c0.477 0.75 0.886 1.295 1.772 1.295 0.887 0 1.363-0.341 1.772-1.362 0.637-1.37 1.199-2.984 1.601-4.66l0.036-0.18c0.467-1.426 0.783-3.077 0.883-4.786l0.003-0.054c0-1.158-0.341-1.841-1.637-2.046-1.781-0.307-3.831-0.483-5.923-0.483-0.242 0-0.483 0.002-0.724 0.007l0.036-0.001c-0.159-0.002-0.347-0.003-0.534-0.003-2.143 0-4.252 0.15-6.315 0.439l0.238-0.027c-0.935 0.080-1.663 0.858-1.663 1.806 0 0.108 0.009 0.214 0.028 0.317l-0.002-0.011c0.106 1.767 0.398 3.42 0.858 5.001l-0.040-0.16c0.501 1.908 1.060 3.519 1.726 5.072l-0.089-0.234c0.476 1.022 0.885 1.363 1.771 1.363 0.887 0 1.296-0.545 1.773-1.295l1.226-1.977c0.341-0.409 0.614-0.681 1.023-0.681zM18.318 15.864c-0.004-0.086-0.006-0.186-0.006-0.287 0-3.576 2.899-6.474 6.474-6.474 0.147 0 0.293 0.005 0.437 0.015l-0.020-0.001c3.474 0 5.792 1.773 5.792 4.226-0.061 2.125-1.799 3.824-3.933 3.824-0.080 0-0.159-0.002-0.237-0.007l0.011 0c-0.109 0.010-0.235 0.015-0.363 0.015-0.878 0-1.696-0.26-2.38-0.708l0.017 0.010c-0.204-0.205-0.34-0.136-0.34 0.069 0.002 0.848 0.34 1.617 0.887 2.181l-0.001-0.001c0.576 0.508 1.338 0.819 2.171 0.819 0.003 0 0.006 0 0.010 0h-0c0.010 0 0.022 0 0.034 0 0.833 0 1.619-0.202 2.312-0.559l-0.028 0.013c0.175-0.124 0.392-0.199 0.627-0.199 0.399 0 0.748 0.215 0.937 0.535l0.003 0.005c0.41 0.612-0.136 1.431-0.612 1.977-1.151 1.024-2.677 1.649-4.348 1.649-0.149 0-0.297-0.005-0.444-0.015l0.020 0.001c-0.074 0.003-0.161 0.005-0.248 0.005-3.744 0-6.779-3.035-6.779-6.779 0-0.111 0.003-0.221 0.008-0.33l-0.001 0.015z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 mt-5">
+                <div class="card" style="border-radius: 15px !important;">
+                    <div class="row">
+                        <div class="col-2 mt-4">
+                            <svg viewBox="0 0 72 72" role="img" aria-label="Subir archivos" width="50px" height="50px"
+                                style="margin-left: 20px;">
+                                <path
+                                    d="M36.493 72C16.118 72 0 55.883 0 36.493 0 16.118 16.118 0 36.493 0 55.882 0 72 16.118 72 36.493 72 55.882 55.883 72 36.493 72zM34 34h-9c-.553 0-1 .452-1 1.01v1.98A1 1 0 0 0 25 38h9v9c0 .553.452 1 1.01 1h1.98A1 1 0 0 0 38 47v-9h9c.553 0 1-.452 1-1.01v-1.98A1 1 0 0 0 47 34h-9v-9c0-.553-.452-1-1.01-1h-1.98A1 1 0 0 0 34 25v9z"
+                                    fill="#5268ff" fill-rule="nonzero"></path>
+                            </svg>
+                        </div>
+                        <div class="col-6" style="margin-left: 10px !important;">
+                            <div class="row mt-4">
+                                <h5>Subir archivos</h5>
+                            </div>
+                            <div class="row mb-2">
+                                <p style="font-size: 14px; margin-top: 0; margin-bottom: 0;">O selecciona una carpeta
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mt-4 mb-5">
+                        <div class="col-2">
+                            <svg width="24" height="24" id="transfer-options-icon" role="img"
+                                aria-label="Alternar opciones de transferencia" fill="#5268ff"
+                                style="margin-left: 20px; margin-top: 6px;">
+                                <path
+                                    d="M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M16.5,13.5 C17.3284271,13.5 18,12.8284271 18,12 C18,11.1715729 17.3284271,10.5 16.5,10.5 C15.6715729,10.5 15,11.1715729 15,12 C15,12.8284271 15.6715729,13.5 16.5,13.5 Z M12,13.5 C12.8284271,13.5 13.5,12.8284271 13.5,12 C13.5,11.1715729 12.8284271,10.5 12,10.5 C11.1715729,10.5 10.5,11.1715729 10.5,12 C10.5,12.8284271 11.1715729,13.5 12,13.5 Z M7.5,13.5 C8.32842712,13.5 9,12.8284271 9,12 C9,11.1715729 8.32842712,10.5 7.5,10.5 C6.67157288,10.5 6,11.1715729 6,12 C6,12.8284271 6.67157288,13.5 7.5,13.5 Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="col-6">
+                            <a href="/result" class="btn btn-secondary rounded-lg w-100"
+                                style="border-radius: 25px !important;">Enviar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <p class="text-light">Recursiva - Challenge</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
