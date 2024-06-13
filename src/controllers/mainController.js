@@ -101,8 +101,6 @@ fs.createReadStream("data/socios.csv")
       .sort((a, b) => b.count - a.count);
   });
 
-let pepe = 999999;
-
 const mainController = {
   loading: (req, res) => res.render("loading"),
 
