@@ -16,7 +16,7 @@ información (se debe proponer como mostrar la información):
 
 ## Proceso de instalación:
 
-- clonación del proyecto:
+- clonación del proyecto: git clone https://github.com/morronepablo/Recursiva---Challenge---NodeJS.git
 - https://www.varietalvinoteca.com.ar -> animaciones de página principal
 - https://frappe.com.ar -> animaciones de página principal, estilo general de la página, datos requeridos para el registro del cliente y filtro de productos.
 - https://www.vinotecacampos.com.ar -> diferentes vistas al seleccionar un producto.
